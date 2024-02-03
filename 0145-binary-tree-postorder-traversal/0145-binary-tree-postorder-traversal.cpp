@@ -12,7 +12,7 @@
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
-        vector<int>result ={};
+        vector<int>result;
         postorderTraversal(root,result);
         return result;
     }
