@@ -8,10 +8,11 @@ long long int helper(int n){
     long long int ans=-1;
     
     while(s<=e){
-        if(mid*mid==n){
+        long long square = mid*mid;
+        if(square==n){
             return mid;
         }
-        if(mid*mid>n){
+        if(square>n){
             e = mid-1;
         }
         else{
@@ -27,6 +28,9 @@ long long int helper(int n){
     
     
 int mySqrt(int n) {
+    if (n == 0 || n == 1){
+        return n;
+    }
     return helper(n);
     }
 };
