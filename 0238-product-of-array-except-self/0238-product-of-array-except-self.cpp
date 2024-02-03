@@ -19,9 +19,7 @@ public:
     //         p= p*nums[j];
     //     }
     //     return p;
-    // }
-
-     vector<int> productExceptSelf(vector<int>& nums){
+    //   vector<int> productExceptSelf(vector<int>& nums){
     //     vector<int> ans;
 
     //     for(int i=0;i<nums.size();i++){
@@ -42,6 +40,10 @@ public:
     //     }
     // return ans;
     // }
+    // }
+
+     vector<int> productExceptSelf(vector<int>& nums){
+
     int n=nums.size();
 
     vector<int> ans1(n,1);
