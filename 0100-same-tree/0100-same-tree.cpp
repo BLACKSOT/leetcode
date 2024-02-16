@@ -24,10 +24,6 @@ public:
         
         bool left = isSameTree(p->left,q->left);
         bool right = isSameTree(p->right,q->right);
-        int ans = false;
-        if(p && q && p->val == q->val){
-            ans = true;
-        }
-        return (left&&right&&ans)?true:false;
+        return (left&&right&&(p->val == q->val))?true:false;
     }
 };
