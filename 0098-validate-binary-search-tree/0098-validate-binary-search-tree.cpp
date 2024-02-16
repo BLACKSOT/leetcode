@@ -31,8 +31,7 @@ public:
             //         return false;
             //         break;
             //     }
-            int min = result[i];
-            if(min>=result[i+1]){
+            if(result[i]>=result[i+1]){
                 return false; 
             }
         }
