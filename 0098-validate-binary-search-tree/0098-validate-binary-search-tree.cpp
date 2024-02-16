@@ -25,12 +25,15 @@ public:
         vector<int> result;
         inorder(root,result);
         
-        for(int i=0;i<result.size();i++){
-            for(int j = i+1;j<result.size();j++){
-                if(result[i]>=result[j]){
-                    return false;
-                    break;
-                }
+        for(int i=0;i<result.size()-1;i++){
+            // for(int j = i+1;j<result.size();j++){
+            //     if(result[i]>=result[j]){
+            //         return false;
+            //         break;
+            //     }
+            int min = result[i];
+            if(min>=result[i+1]){
+                return false; 
             }
         }
         return true;
