@@ -27,8 +27,6 @@ public:
         vector<int>final;
         
         inorder(root, result);
-                
-        int count = 0;
         
         for(auto it: result){
             m[it]++;
