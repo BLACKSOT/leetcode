@@ -5,7 +5,7 @@ public:
         
         for(int i=0;i<s.size();i++){
             char ch= s[i];
-            if((65<=ch && ch<=90) || (97<=ch && ch<=122) || (48<=ch && ch<=57)){
+            if(isalnum(ch)){
                 result.push_back(tolower(ch));
             }
         }
