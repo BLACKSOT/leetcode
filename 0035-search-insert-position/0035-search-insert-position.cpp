@@ -19,9 +19,7 @@ public:
             }
             mid = s+(e-s)/2;
         }
-        if(s>e){
             index = s;
-        }
         return index;
     }
 };
