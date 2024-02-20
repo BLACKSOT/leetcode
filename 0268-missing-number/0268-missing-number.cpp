@@ -17,14 +17,16 @@ public:
 //         return n;
 //     }
         
-        set<int> s;
-        for(int i=0;i<nums.size();i++){
-            s.insert(nums[i]);
-        }
-        nums.clear();
-        for(int it: s){
-            nums.push_back(it);
-        }
+//         set<int> s;
+//         for(int i=0;i<nums.size();i++){
+//             s.insert(nums[i]);
+//         }
+//         nums.clear();
+//         for(int it: s){
+//             nums.push_back(it);
+//         }
+        
+        sort(nums.begin(),nums.end());
         
         for(int i=0;i<nums.size();i++){
             if(i!=nums[i]){
