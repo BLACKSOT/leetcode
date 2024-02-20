@@ -26,25 +26,12 @@ public:
 //             nums.push_back(it);
 //         }
         
-//         sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end());
         
-//         for(int i=0;i<nums.size();i++){
-//             if(i!=nums[i]){
-//                 return i;
-//             }
-//         }
-//         return nums.size();
-//     }
-        
-        priority_queue<int,vector<int>,greater<int>> pq;
         for(int i=0;i<nums.size();i++){
-            pq.push(nums[i]);
-        }
-        for(int i=0;i<nums.size();i++){
-            if(pq.top()!=i){
+            if(i!=nums[i]){
                 return i;
             }
-            pq.pop();
         }
         return nums.size();
     }
