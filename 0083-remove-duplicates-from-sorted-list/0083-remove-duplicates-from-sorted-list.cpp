@@ -1,39 +1,38 @@
-#include <set>
-
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        // Check if the list is empty
-        if (head == nullptr) {
-            return nullptr;
+        if(head==NULL){
+            return NULL;
         }
-
-        // Create a set to store unique values
-        std::set<int> s;
-
-        // Traverse the original list to insert unique values into the set
+        set<int> s;
         ListNode* temp = head;
-        while (temp != nullptr) {
+        while(temp!=NULL){
             s.insert(temp->val);
             temp = temp->next;
         }
-
-        // Create a new head pointer for the new list
-        ListNode* newHead = nullptr;
-        ListNode* tail = nullptr;
-
-        // Traverse the set and create new nodes for the new list
-        for (int val : s) {
-            ListNode* newNode = new ListNode(val);
-            if (newHead == nullptr) {
-                newHead = newNode;
-                tail = newNode;
-            } else {
-                tail->next = newNode;
-                tail = newNode;
+        ListNode* head1 = NULL;
+        ListNode* tail1 = NULL;
+        for(int val:s){
+            ListNode* temp1 = new ListNode(val);
+            if(head1==NULL){
+                head1 =temp1;
+                tail1=head1;
+            }
+            else{
+            tail1->next=temp1;
+            tail1 = temp1;
             }
         }
-
-        return newHead;
+    return head1;
     }
 };
